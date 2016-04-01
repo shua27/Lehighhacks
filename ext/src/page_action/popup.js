@@ -64,10 +64,32 @@ chrome.tabs.getSelected(null, function(tab) {
             td.appendChild(document.createTextNode(entities[i].sentiment.type));
                         
         }
-
         $(tbl).prepend('<thead> <tr> <th>Entity</th> <th>Relevance</th> <th>Type</th> <th>sentiment</th> </tr> </thead>');
         
         $('#mainPopup').append("<h1>Important Entities</h1>");
+        $('#mainPopup').append(tbl);
+
+
+        tbl  = document.createElement('table');
+        $(tbl).addClass('pure-table');
+        
+        categories = data.toneAnal2.document_tone.tone_categories;
+
+        for(var i = 0; i < 3; i++){
+            tones = categories[i].tones;
+            var tr = tbl.insertRow();
+            
+            for (var j = 0; j < 3; j++){        
+                    var td = tr.insertCell();
+                    var score = '' + (tones[j].score * 100 | 0) + '%';
+                    var width = '' + ((tones[j].score) * 100 | 0) + '%';
+                    $(td).html('<div style = width:' + width + ';>' + tones[j].tone_id.replace("_big5", "") + " " + score + '</div>');
+
+                  
+            }            
+        }
+
+        $('#mainPopup').append("<h1>Tones</h1score + >");
         $('#mainPopup').append(tbl);
 
     });

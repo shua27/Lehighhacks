@@ -91,7 +91,7 @@ h1 {
 table{
     font-size:large;
     margin:20px auto;
-    min-width:70%
+    min-width:95%
 }
 
 td{
@@ -107,6 +107,7 @@ td div {
     position: absolute;
     top: 0;
     left: 0;
+    white-space: nowrap;
 }
 
 #header p {
@@ -117,4 +118,8 @@ td div {
 
 #author{
     font-size:12px;
+}
+
+tr{
+    height:38px;
 }
