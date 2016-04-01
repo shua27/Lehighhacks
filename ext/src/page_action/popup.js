@@ -21,6 +21,10 @@ chrome.tabs.getSelected(null, function(tab) {
         var body = document.body;
         tbl  = document.createElement('table');
         $(tbl).addClass('pure-table');
+
+        if (author){
+            $("#header").append("<div id ='author'>Author: " + author + "</div>");
+        }
         
         for(var i = 0; i < 3; i++){
             var tr = tbl.insertRow();

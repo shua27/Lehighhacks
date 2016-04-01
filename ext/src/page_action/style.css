@@ -103,8 +103,18 @@ td div {
     background-color: #0288D1;
     line-height: 100%;
     padding: 8px;
-    color: white;
+    color: #222;
     position: absolute;
     top: 0;
     left: 0;
+}
+
+#header p {
+    max-width: 90%;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+#author{
+    font-size:12px;
 }
