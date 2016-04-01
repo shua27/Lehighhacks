@@ -1,17 +1,20 @@
 <!doctype html>
-<style type="text/css">
-	#mainPopup {
-		padding: 10px;
-		height: 200px;
-		width: 400px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
-	}
-	h1 {
-		font-size: 2em;
-	}
-</style>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">  
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+</head>
+<body>
+  <div id="header">
+    <p id="currentLink">Loading ...</p>
+  </div>
+  
+  <div id="mainPopup">
+    <h1>Analyzing article... (May take up to 30 seconds)</h1>
+    <div class="loader">Loading...</div>
 
-<div id="mainPopup">
-<h1>Hello extensionizr!</h1>
-<p>To shut this popup down, edit the manifest file and remove the "default popup" key. To edit it, just edit ext/page_action/page_action.html. The CSS is there, too.</p>
-</div>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="https://lehighhackers.mybluemix.net/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+
+  </div>
+</body>
